@@ -16,6 +16,12 @@ aws-sam-lambda-rest-api-typescript-example
 
 `npm i @types/node @types/aws-lambda`
 
+`npm i -D concurrently`
+
+concurrently allows several scripts to be run in sequence:
+
+- compiles ts
+
 # typescript-eslint
 
 `npm i -D eslint @typescript-eslint/parser @typescript-eslint/eslint-plugin`
@@ -56,7 +62,11 @@ extends: [
 
 pre-requisite: docker
 
-`npm run build && npm run dev`
+Method 1:
+`npm runs start`
+
+Method 2:
+`npm run start-api` then hit http://localhost:8080/hello
 
 response
 
