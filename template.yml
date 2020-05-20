@@ -1,0 +1,25 @@
+AWSTemplateFormatVersion: 2010-09-09
+Description: >-
+  aws-sam-lambda-rest-api-typescript-example
+
+Transform:
+  - AWS::Serverless-2016-10-31
+
+Resources:
+  helloFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      CodeUri: dist/functions/
+      Handler: hello.getAllItemsHandler
+      Runtime: nodejs12.x
+      MemorySize: 128
+      Timeout: 1000
+      Description: A Lambda function that returns a static string.
+      Policies:
+        - AWSLambdaBasicExecutionRole
+      Events:
+        HelloWorld:
+          Type: Api
+          Properties:
+            Path: /hello
+            Method: get

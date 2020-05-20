@@ -43,3 +43,8 @@ extends: [
   'project': './tsconfig.json'
 }
 ```
+
+# Jest Typescript
+
+`npm i -D jest ts-jest @types/jest`
+`npx ts-jest config:init` - creates jest.config.js
