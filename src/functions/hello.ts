@@ -17,12 +17,12 @@ export async function getAllItemsHandler(event: APIGatewayEvent, ctx: Context): 
     throw new Error(`getAllItems only accept GET method, but you tried: ${event.httpMethod}`)
   }
 
-  const payload = { message: 'hello world getAllItems' }
+  const payload = { message: event.body }
 
   try {
     response = {
       statusCode: 200,
-      body: JSON.stringify(payload),
+      body: JSON.stringify(payload)
     }
   } catch (err) {
     console.log(err)
