@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "tsc",
+    "dev": "sam local invoke --event ./events/event.json",
     "test": "jest"
   },
   "repository": {
@@ -26,9 +27,7 @@
   },
   "homepage": "https://github.com/ariesmcrae/aws-sam-lambda-rest-api-typescript-example#readme",
   "devDependencies": {
-    "@types/aws-lambda": "^8.10.51",
     "@types/jest": "^25.2.3",
-    "@types/node": "^14.0.4",
     "@typescript-eslint/eslint-plugin": "^2.34.0",
     "@typescript-eslint/parser": "^2.34.0",
     "eslint": "^6.8.0",
@@ -42,5 +41,9 @@
     "jest": "^26.0.1",
     "ts-jest": "^26.0.0",
     "typescript": "^3.9.3"
+  },
+  "dependencies": {
+    "@types/aws-lambda": "^8.10.51",
+    "@types/node": "^14.0.4"
   }
 }

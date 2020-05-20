@@ -6,13 +6,15 @@ aws-sam-lambda-rest-api-typescript-example
 
 `git clone https://github.com/ariesmcrae/aws-sam-lambda-rest-api-typescript-example.git`
 
-`npm init` will create package.json
+`npm init` - will create package.json
 
-`npx tsc --init` will create tsconfig.json
+`npx tsc --init` - will create tsconfig.json
 
 ## Dependencies
 
-`npm install -D typescript @types/node @types/aws-lambda`
+`npm i -D typescript`
+
+`npm i @types/node @types/aws-lambda`
 
 # typescript-eslint
 
@@ -47,4 +49,22 @@ extends: [
 # Jest Typescript
 
 `npm i -D jest ts-jest @types/jest`
+
 `npx ts-jest config:init` - creates jest.config.js
+
+# Run
+
+pre-requisite: docker
+
+`npm run build && npm run dev`
+
+response
+
+```
+{
+   "statusCode":200,
+   "body":{
+      "message":"hello world getAllItems"
+   }
+}
+```

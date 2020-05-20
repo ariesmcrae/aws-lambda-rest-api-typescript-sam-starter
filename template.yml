@@ -9,7 +9,7 @@ Resources:
   helloFunction:
     Type: AWS::Serverless::Function
     Properties:
-      CodeUri: dist/functions/
+      CodeUri: ./dist/functions/
       Handler: hello.getAllItemsHandler
       Runtime: nodejs12.x
       MemorySize: 128
@@ -18,7 +18,7 @@ Resources:
       Policies:
         - AWSLambdaBasicExecutionRole
       Events:
-        HelloWorld:
+        Hello:
           Type: Api
           Properties:
             Path: /hello
