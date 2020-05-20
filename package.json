@@ -8,7 +8,7 @@
     "start:build": "tsc",
     "start:run": "sam local invoke --event ./events/event.json",
     "start": "concurrently npm:start:*",
-    "start-api": "concurrently --kill-others --kill-others-on-fail \"sam local start-api --port 8080\" ",
+    "start-api": "concurrently --kill-others --kill-others-on-fail \"tsc && sam local start-api --port 8080\" ",
     "test": "jest"
   },
   "repository": {

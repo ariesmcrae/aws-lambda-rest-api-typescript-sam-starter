@@ -12,7 +12,7 @@ let response: ProxyResult
  * Return doc: https://docs.aws.amazon.com/apigateway/latest/developerguide/set-up-lambda-proxy-integrations.html
  * @returns {Object} object - API Gateway Lambda Proxy Output Format
  */
-exports.getAllItemsHandler = async (event: APIGatewayEvent, ctx: Context): Promise<ProxyResult> => {
+export async function getAllItemsHandler(event: APIGatewayEvent, ctx: Context): Promise<ProxyResult> {
   if (event.httpMethod !== 'GET') {
     throw new Error(`getAllItems only accept GET method, but you tried: ${event.httpMethod}`)
   }
