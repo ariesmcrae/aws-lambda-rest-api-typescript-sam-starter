@@ -9,8 +9,7 @@ Resources:
   helloFunction:
     Type: AWS::Serverless::Function
     Properties:
-      CodeUri: ./dist/functions/
-      Handler: hello.getAllItemsHandler
+      Handler: ./dist/functions/hello.getAllItemsHandler
       Runtime: nodejs12.x
       MemorySize: 128
       Timeout: 1000

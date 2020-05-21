@@ -78,3 +78,13 @@ response
    }
 }
 ```
+
+# Deploy
+
+`sam build`
+`sam deploy --guided`
+https://cicd.serverlessworkshops.io/manualdeploy/deploy.html
+
+# Delete SAM
+
+Delete cloudformation
