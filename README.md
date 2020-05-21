@@ -79,12 +79,21 @@ response
 }
 ```
 
+# validate template
+
+`sam validate`
+
 # Deploy
 
 `sam build`
 `sam deploy --guided`
 https://cicd.serverlessworkshops.io/manualdeploy/deploy.html
 
+## verify deployment
+
+https://cicd.serverlessworkshops.io/manualdeploy/verify.html
+
 # Delete SAM
 
 Delete cloudformation
+`aws cloudformation delete-stack --stack-name sam-app --region region`
