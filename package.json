@@ -6,6 +6,7 @@
   "scripts": {
     "lint": "eslint . --ext .ts,.tsx",
     "start:build": "tsc",
+    "start:sam-build": "sam build",
     "start:run": "sam local invoke --event ./events/event.json",
     "start": "concurrently npm:start:*",
     "start-api": "concurrently --kill-others --kill-others-on-fail \"tsc && sam local start-api --port 8080\" ",

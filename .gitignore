@@ -81,7 +81,9 @@ typings/
 
 # Nuxt.js build / generate output
 .nuxt
-dist
+
+# never ever put dist in .gitignore. Otherwise 'sam build' won't copy over /dist/ in .aws-sam
+#dist
 
 # Gatsby files
 .cache/
