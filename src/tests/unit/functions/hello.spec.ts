@@ -1,10 +1,9 @@
 import { getAllItemsHandler } from '../../../functions/hello'
-import { APIGatewayEvent, Context, ProxyResult } from 'aws-lambda'
+import { APIGatewayEvent, Context } from 'aws-lambda'
 
 test('getAllItemsHandler returns 200', async () => {
   const event = {
-    httpMethod: 'GET',
-    body: 'hello world getAllItemsHandler',
+    httpMethod: 'GET'
   } as APIGatewayEvent
 
   const context = {} as Context
@@ -13,12 +12,12 @@ test('getAllItemsHandler returns 200', async () => {
   const parsedBody = JSON.parse(result.body)
 
   expect(result.statusCode).toBe(200)
-  expect(parsedBody.message).toStrictEqual(event.body)
+  expect(parsedBody).toStrictEqual(event)
 })
 
 test('getAllItemsHandler to throw error', async () => {
   const event = {
-    httpMethod: 'POST',
+    httpMethod: 'POST'
   } as APIGatewayEvent
 
   const context = {} as Context
