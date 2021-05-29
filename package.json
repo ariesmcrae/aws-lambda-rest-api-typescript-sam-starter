@@ -1,54 +1,54 @@
 {
-  "name": "aws-sam-lambda-rest-api-typescript-example",
+  "name": "aws-lambda-rest-api-typescript-sam-starter",
   "version": "0.0.1",
-  "description": "aws sam lambda rest api typescript example",
+  "description": "aws lambda rest api typescript sam starter",
   "main": "index.js",
   "scripts": {
-    "lint": "eslint . --ext .ts,.tsx",
-    "start:build": "tsc",
-    "start:sam-build": "sam build",
-    "start:run": "sam local invoke --event ./events/event.json",
-    "start": "concurrently npm:start:*",
-    "start-api": "concurrently --kill-others --kill-others-on-fail \"tsc && sam local start-api --port 8080\" ",
+    "lint": "prettier --write .",
+    "build": "node_modules/typescript/bin/tsc",
+    "watch": "node_modules/typescript/bin/tsc -w --preserveWatchOutput",
+    "run": "sam local invoke --event ./events/event.json",
+    "start": "npm run build && sam local start-api --port 3000",
     "test": "jest"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ariesmcrae/aws-sam-lambda-rest-api-typescript-example.git"
+    "url": "git+https://github.com/ariesmcrae/aws-lambda-rest-api-typescript-sam-starter.git"
   },
   "keywords": [
     "aws",
-    "sam",
     "lambda",
-    "rest",
-    "api",
-    "typescript"
+    "rest-api",
+    "typescript",
+    "sam",
+    "starter"
   ],
-  "author": "Aries McRae",
+  "author": "github@ariesmcrae.com",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/ariesmcrae/aws-sam-lambda-rest-api-typescript-example/issues"
+    "url": "https://github.com/ariesmcrae/aws-lambda-rest-api-typescript-sam-starter/issues"
   },
-  "homepage": "https://github.com/ariesmcrae/aws-sam-lambda-rest-api-typescript-example#readme",
+  "homepage": "https://github.com/ariesmcrae/aws-lambda-rest-api-typescript-sam-starter#readme",
   "devDependencies": {
-    "@types/jest": "^25.2.3",
-    "@typescript-eslint/eslint-plugin": "^2.34.0",
-    "@typescript-eslint/parser": "^2.34.0",
-    "concurrently": "^5.2.0",
-    "eslint": "^7.0.0",
-    "eslint-config-prettier": "^6.11.0",
-    "eslint-config-standard-with-typescript": "^17.0.0",
-    "eslint-plugin-import": "^2.20.2",
-    "eslint-plugin-jest": "^23.13.1",
+    "@tsconfig/node14": "1.0.0",
+    "@types/jest": "26.0.23",
+    "@typescript-eslint/eslint-plugin": "^4.25.0",
+    "@typescript-eslint/parser": "^4.25.0",
+    "eslint": "^7.27.0",
+    "eslint-config-prettier": "8.3.0",
+    "eslint-config-standard": "^16.0.3",
+    "eslint-plugin-import": "^2.23.3",
     "eslint-plugin-node": "^11.1.0",
-    "eslint-plugin-promise": "^4.2.1",
-    "eslint-plugin-standard": "^4.0.1",
-    "jest": "^26.0.1",
-    "ts-jest": "^26.0.0",
-    "typescript": "^3.9.3"
+    "eslint-plugin-promise": "^5.1.0",
+    "jest": "27.0.1",
+    "prettier": "2.3.0",
+    "ts-jest": "27.0.1",
+    "typescript": "^4.3.2",
+    "@types/aws-lambda": "8.10.76",
+    "@types/node": "15.6.1",
+    "@types/source-map-support": "0.5.3"
   },
   "dependencies": {
-    "@types/aws-lambda": "^8.10.51",
-    "@types/node": "^14.0.4"
+    "source-map-support": "0.5.19"
   }
 }
